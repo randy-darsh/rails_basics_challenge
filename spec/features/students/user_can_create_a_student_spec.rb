@@ -8,7 +8,7 @@ describe "When a user visits the new student page" do
 
     click_on "Create Student"
 
-    expect(current_path).to be(student_path(Student.last))
+    expect(current_path).to eq(student_path(Student.last))
 
     expect(page).to have_content("Guy")
   end
